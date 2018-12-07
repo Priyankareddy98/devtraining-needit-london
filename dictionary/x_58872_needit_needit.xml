@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="Needit" max_length="40" name="x_58872_needit_needit" sizeclass="4" type="collection">
+    <element extends="task" label="Needit" max_length="40" name="x_58872_needit_needit" sizeclass="9" type="collection">
+        <element label="Requested for" max_length="32" name="requested_for" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="New Choice" max_length="40" name="u_choice_2" type="string">
             <choice>
                 <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
@@ -7,5 +8,8 @@
                 <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="What needed" max_length="40" name="u_what_needed" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="When needed" max_length="40" name="u_when_needed" type="string"/>
     </element>
 </database>
